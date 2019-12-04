@@ -24,7 +24,7 @@ jobs:
           git clone --depth 1 https://github.com/coolsnowwolf/lede -b master openwrt
 
       - name: Change Feeds
-        run: mv ./actions/settings/feeds.conf.default openwrt/feeds.conf.default
+        run: sed -i 's/coolsnowwolf\/luci/soandsoso\/luci/g' openwrt/feeds.conf.default
 
       - name: Update & Install feeds
         run: cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
