@@ -50,11 +50,19 @@ jobs:
           cd openwrt
           echo -e "$(nproc) thread build."
           make -j$(nproc) V=s CONFIG_DEBUG_SECTION_MISMATCH=y 2>&1 | egrep -i '(warn|error)'
-          zip -q -r op_out.zip bin/targets
+          zip -q -r op_targets.zip bin/targets
+          zip -q -r op_packages.zip bin/packages
 
-      - name: Upload to release
+      - name: Upload targets
         uses: JasonEtco/upload-to-release@master
         with:
-          args: openwrt/op_out.zip application/zip
+          args: openwrt/op_targets.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_UPLOAD_TOKEN }}
+
+      - name: Upload packages
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: openwrt/op_packages.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_UPLOAD_TOKEN }}
