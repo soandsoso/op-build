@@ -22,7 +22,7 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/soandsoso/op-build -b master actions
           git clone --depth 1 https://github.com/coolsnowwolf/lede -b master openwrt
-          git clone --depth 1 git@github.com:soandsoso/luci-theme-atmaterial.git -b master openwrt/package/lean/luci-theme-atmaterial
+          git clone --depth 1 https://github.com/soandsoso/luci-theme-atmaterial -b master openwrt/package/lean/luci-theme-atmaterial
 
       - name: Update & Install feeds
         run: cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
