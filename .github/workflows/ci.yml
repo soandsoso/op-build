@@ -1,8 +1,9 @@
 name: Build
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - v*-r619
 
 jobs:
   build:
