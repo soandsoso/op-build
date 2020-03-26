@@ -12,7 +12,7 @@ name: r619ac
 on:
   push:
     tags:
-      - v*-r619
+      - v*-619
 
 jobs:
   build:

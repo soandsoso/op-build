@@ -12,7 +12,7 @@ name: x64
 on:
   push:
     tags:
-      - v*-x64
+      - v*-64
 
 jobs:
   build:
