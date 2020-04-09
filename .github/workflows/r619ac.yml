@@ -102,6 +102,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
           # CONFIG_PACKAGE_luci-app-docker is not set
+          # CONFIG_PACKAGE_luci-app-filetransfer is not set
           # CONFIG_PACKAGE_luci-app-frpc is not set
           # CONFIG_PACKAGE_luci-app-kodexplorer is not set
           # CONFIG_PACKAGE_luci-app-minidlna is not set
@@ -115,6 +116,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-wireguard is not set
           # CONFIG_PACKAGE_luci-app-wrtbwmon is not set
           # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-zerotier is not set
           # CONFIG_UnblockNeteaseMusic_Go is not set
           # CONFIG_UnblockNeteaseMusic_NodeJS is not set
@@ -129,6 +131,8 @@ jobs:
           # CONFIG_PACKAGE_transmission-remote-openssl is not set
           # CONFIG_PACKAGE_transmission-web is not set
           # CONFIG_PACKAGE_transmission-web-control is not set
+          # CONFIG_DEFAULT_luci-app-music-remote-center is not set
+          # CONFIG_PACKAGE_luci-app-music-remote-center is not set
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
           CONFIG_PACKAGE_luci-app-nlbwmon=y
           CONFIG_PACKAGE_luci-app-upnp=y
