@@ -87,5 +87,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware
+          name: op-1907-r619ac
           path: ./openwrt/bin/
