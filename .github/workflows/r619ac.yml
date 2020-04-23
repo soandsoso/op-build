@@ -40,6 +40,8 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/coolsnowwolf/lede -b master openwrt
           git clone --depth 1 https://github.com/yangsongli/luci-theme-atmaterial.git -b master openwrt/package/lean/luci-theme-atmaterial
+          rm ./openwrt/package/lean/luci-theme-atmaterial/files/htdocs/logo.png
+          cp ./files/logo.png ./openwrt/package/lean/luci-theme-atmaterial/files/htdocs/logo.png
 
       - name: Update feeds
         run: |
