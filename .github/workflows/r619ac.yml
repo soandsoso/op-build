@@ -42,6 +42,7 @@ jobs:
           git clone --depth 1 https://github.com/yangsongli/luci-theme-atmaterial.git -b master openwrt/package/lean/luci-theme-atmaterial
           git clone --depth 1 https://github.com/fw876/helloworld.git -b master helloworld
           cp -r ./helloworld/luci-app-ssr-plus ./openwrt/package/lean/luci-app-ssr-plus
+          rm ./openwrt/package/lean/luci-theme-atmaterial/files/htdocs/logo.png
           cp ./files/logo.png ./openwrt/package/lean/luci-theme-atmaterial/files/htdocs/logo.png
 
       - name: Update feeds
