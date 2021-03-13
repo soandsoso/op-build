@@ -89,71 +89,40 @@ jobs:
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           #
 
-          # 编译x64固件:
+          # 编译固件:
           cat >> .config <<EOF
           CONFIG_TARGET_ipq40xx=y
-          CONFIG_TARGET_ipq40xx_DEVICE_p2w_r619ac-128m=y
-          EOF
-
-          # IPv6支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_ipv6helper=y
-          EOF
-
-          # 常用LuCI插件选择:
-          cat >> .config <<EOF
-          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          CONFIG_TARGET_ipq40xx_generic=y
+          CONFIG_TARGET_ipq40xx_generic_DEVICE_p2w_r619ac-128m=y
+          # CONFIG_PACKAGE_UnblockNeteaseMusic is not set
+          # CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
+          # CONFIG_PACKAGE_adbyby is not set
+          # CONFIG_PACKAGE_kmod-tun is not set
+          # CONFIG_PACKAGE_libatomic is not set
+          # CONFIG_PACKAGE_libcares is not set
+          # CONFIG_PACKAGE_libhttp-parser is not set
+          # CONFIG_PACKAGE_libminiupnpc is not set
+          # CONFIG_PACKAGE_libnatpmp is not set
+          # CONFIG_PACKAGE_libnghttp2 is not set
+          # CONFIG_PACKAGE_libstdcpp is not set
+          # CONFIG_PACKAGE_libuv is not set
           # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
-          # CONFIG_PACKAGE_luci-app-docker is not set
           # CONFIG_PACKAGE_luci-app-filetransfer is not set
-          # CONFIG_PACKAGE_luci-app-frpc is not set
-          # CONFIG_PACKAGE_luci-app-kodexplorer is not set
-          # CONFIG_PACKAGE_luci-app-minidlna is not set
-          # CONFIG_PACKAGE_luci-app-openvpn is not set
-          # CONFIG_PACKAGE_luci-app-openvpn-server is not set
-          # CONFIG_PACKAGE_luci-app-qbittorrent is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
-          # CONFIG_PACKAGE_luci-app-v2ray-server is not set
-          # CONFIG_PACKAGE_luci-app-verysync is not set
-          # CONFIG_PACKAGE_luci-app-webadmin is not set
-          # CONFIG_PACKAGE_luci-app-wireguard is not set
-          # CONFIG_PACKAGE_luci-app-wrtbwmon is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
           # CONFIG_PACKAGE_luci-app-unblockmusic is not set
-          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           # CONFIG_PACKAGE_luci-app-zerotier is not set
+          # CONFIG_PACKAGE_luci-lib-fs is not set
+          CONFIG_PACKAGE_luci-lib-json=y
+          CONFIG_PACKAGE_luci-mod-rpc=y
+          CONFIG_PACKAGE_luci-theme-atmaterial=y
+          # CONFIG_PACKAGE_node is not set
+          # CONFIG_PACKAGE_vlmcsd is not set
+          # CONFIG_PACKAGE_zerotier is not set
           # CONFIG_UnblockNeteaseMusic_Go is not set
           # CONFIG_UnblockNeteaseMusic_NodeJS is not set
-          # CONFIG_PACKAGE_mktorrent is not set
-          # CONFIG_PACKAGE_opentracker is not set
-          # CONFIG_PACKAGE_opentracker6 is not set
-          # CONFIG_PACKAGE_qBittorrent is not set
-          # CONFIG_PACKAGE_rtorrent is not set
-          # CONFIG_PACKAGE_rtorrent-rpc is not set
-          # CONFIG_PACKAGE_transmission-cli-openssl is not set
-          # CONFIG_PACKAGE_transmission-daemon-openssl is not set
-          # CONFIG_PACKAGE_transmission-remote-openssl is not set
-          # CONFIG_PACKAGE_transmission-web is not set
-          # CONFIG_PACKAGE_transmission-web-control is not set
-          # CONFIG_DEFAULT_luci-app-music-remote-center is not set
-          # CONFIG_PACKAGE_luci-app-music-remote-center is not set
-          CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
-          CONFIG_PACKAGE_luci-app-nlbwmon=y
-          CONFIG_PACKAGE_luci-app-upnp=y
-          CONFIG_PACKAGE_luci-app-wol=y
-          CONFIG_PACKAGE_luci-mod-rpc=y
-          EOF
-
-          # LuCI主题:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-theme-atmaterial=y
-          EOF
-
-          # 常用软件包:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_curl=y
-          CONFIG_PACKAGE_htop=y
-          CONFIG_PACKAGE_vim-fuller=y
-          CONFIG_PACKAGE_wget=y
           EOF
 
           #
