@@ -123,11 +123,8 @@ jobs:
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust=y
-          CONFIG_DEFAULT_luci-app-zerotier=y
-          CONFIG_PACKAGE_luci-app-zerotier=y
           # CONFIG_PACKAGE_luci-app-unblockmusic is not set
           # CONFIG_PACKAGE_luci-app-vlmcsd is not set
-          # CONFIG_PACKAGE_luci-app-zerotier is not set
           # CONFIG_PACKAGE_luci-lib-fs is not set
           CONFIG_PACKAGE_luci-lib-json=y
           CONFIG_PACKAGE_luci-mod-rpc=y
@@ -142,9 +139,7 @@ jobs:
           CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
           CONFIG_PACKAGE_tcpdump=y
 
-          CONFIG_PACKAGE_zerotier=y
           # CONFIG_PACKAGE_vlmcsd is not set
-          # CONFIG_PACKAGE_zerotier is not set
           # CONFIG_UnblockNeteaseMusic_Go is not set
           # CONFIG_UnblockNeteaseMusic_NodeJS is not set
           EOF
